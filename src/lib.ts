@@ -27,3 +27,18 @@ export const toMatrix = (input: string, seperator?: string): number[][] => {
 export const everyPair = (array: number[], predicate: Function) => {
     return array.every((n, i: number) => !i || predicate(array[i - 1], n));
 }
+
+const _findPair = (array: number[], predicate: Function): number => {
+    const index = array.findIndex((v, i) => { 
+        if (i === 0) {
+            const firstPair = predicate(v, array[i + 1]);
+            const secondPair = predicate(array[i + 1], array[i + 2]);
+            // remove first element if the first pair fails the predicate but the second pair passes.
+            return !firstPair && secondPair;
+        } else {
+            return !predicate(array[i - 1], v); // remove second item in a pair that fails the predicate
+        }
+    });
+
+    return index
+};
