@@ -1,0 +1,14 @@
+
+// adventofcode.com/2024/day/
+
+import {} from './lib'
+
+export const dayOnePartOne = (input: string): number => {
+    return 0;
+}
+
+export const dayOnePartTwo = (input: string): number => {
+    return 0;
+}
+
+export const day1Input: string = ""

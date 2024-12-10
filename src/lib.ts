@@ -9,9 +9,9 @@ export const toHist = <T>(array: T[]): Record<string, number> => {
     return hist;
 }
 
-export const splitIntoArray = (input: string): string[][] => {
-    let first: string[] = [];
-    let last: string[] = [];
+export const splitIntoArrays = (input: string): string[][] => {
+    const first: string[] = [];
+    const last: string[] = [];
     input.split('\n').forEach((row) => {
         const items: string[] = row.split('   ');
         last.push(items.pop()!)

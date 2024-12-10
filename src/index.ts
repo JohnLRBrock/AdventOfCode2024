@@ -1,5 +1,8 @@
 "use strict";
-import { dayOnePartOne, dayOnePartTwo, day1Input } from './dayOne'
+import * as DayOne from './dayOne'
+import * as DayTwo from './dayTwo';
+import * as Input from './input'
 
-console.log('Day 1.1:', dayOnePartOne(day1Input));
-console.log('Day 1.2:', dayOnePartTwo(day1Input));
+console.log('Day 1.1:', DayOne.partOne(Input.day1()));
+console.log('Day 1.2:', DayOne.partTwo(Input.day1()));
+console.log('Day 2.1:', DayTwo.partOne(Input.day2()));
