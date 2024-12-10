@@ -1,6 +1,6 @@
 "use strict";
-import * as DayOne from './dayOne'
-import * as DayTwo from './dayTwo';
+import * as DayOne from './day01'
+import * as DayTwo from './day02';
 import * as Input from './input'
 
 console.log('Day 1.1:', DayOne.partOne(Input.day(1)));
