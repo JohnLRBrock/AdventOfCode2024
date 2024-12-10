@@ -19,3 +19,11 @@ export const splitIntoArrays = (input: string): string[][] => {
     });
     return [first, last];
 }
+
+export const toMatrix = (input: string, seperator?: string): number[][] => {
+    return input.split('\n').map(row => row.split(seperator || ' ').map(Number));
+}
+
+export const everyPair = (array: number[], predicate: Function) => {
+    return array.every((n, i: number) => !i || predicate(array[i - 1], n));
+}
