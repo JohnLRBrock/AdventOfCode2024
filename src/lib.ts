@@ -20,8 +20,8 @@ export const splitIntoArrays = (input: string): string[][] => {
     return [first, last];
 }
 
-export const toMatrix = (input: string, seperator?: string): number[][] => {
-    return input.split('\n').map(row => row.split(seperator || ' ').map(Number));
+export const toMatrix = (input: string, seperator?: string): string[][] => {
+    return input.split('\n').map(row => row.split(seperator || ' '));
 }
 
 export const everyPair = (array: number[], predicate: Function) => {

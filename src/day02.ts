@@ -5,12 +5,14 @@ import { toMatrix, everyPair } from './lib'
 
 export const partOne = (input: string): number => {
     return toMatrix(input)
+        .map((row) => row.map(Number))
         .filter(row => rowIncreasing(row) || rowDecreasing(row))
         .length;
 };
 
 export const partTwo = (input: string): number => {
     return toMatrix(input)
+        .map((row) => row.map(Number))
         .map(everyPermutation)
         .filter((rows) => rows.some((row) => rowIncreasing(row) || rowDecreasing(row)))
         .length;
